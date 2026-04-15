@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Quete de Redouane</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: monospace;
+            overflow: hidden;
+        }
+
+        #gameContainer {
+            position: relative;
+            border: 3px solid #d4af37;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2), 0 0 60px rgba(0, 0, 0, 0.5);
+        }
+
+        #gameCanvas {
+            display: block;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: -35px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #555;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="controls">ZQSD: Bouger | SHIFT: Courir | ESPACE: Attaque | E: Interagir | C: Dash | H: Soin | B: Bouclier | TAB: Carnet</div>
+    </div>
+
+    <!-- Scripts dans l'ordre de dependance -->
+    <script src="js/sprites.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/rpg.js"></script>
+    <script src="js/engine.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/entities.js"></script>
+    <script src="js/dialogue.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
